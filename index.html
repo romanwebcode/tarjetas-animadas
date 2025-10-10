@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="contenido-titulo">
+            <h1 class="titulo" > La Liga de las Batallas en 3D</h1>        
+         </div>
+
+         <!-- contenedor de la tarjetas  -->
+          <div class="contenedor-tarjetas">
+           <!-- recuadro exterior de las tarjetas   -->
+            <div class="recuadro-tarjetas">
+                <!-- tarjetas con sus dos lados  -->
+                <div class="card-int">
+                    <div class="card-front">
+                        <img src="/image/rom5.png" alt="">
+                    </div>
+                    <div class="card-back">
+                       <img src="/image/autorm.png" alt="">
+
+                    </div>
+                </div>
+                
+            </div>   
+             <!-- recuadro exterior de las tarjetas   -->
+            <div class="recuadro-tarjetas">
+                <!-- tarjetas con sus dos lados  -->
+                <div class="card-int">
+                    <div class="card-front">
+                        <img src="/image/aliens.png" alt="">
+                    </div>
+                    <div class="card-back">
+                       <img src="/image/auto-alien.png" alt="">
+
+                    </div>
+                </div>
+                
+            </div>   
+             <!-- recuadro exterior de las tarjetas   -->
+            <div class="recuadro-tarjetas">
+                <!-- tarjetas con sus dos lados  -->
+                <div class="card-int">
+                    <div class="card-front">
+                        <img src="/image/fox6.png" alt="">
+                    </div>
+                    <div class="card-back">
+                       <img src="/image/autofx.png" alt="">
+
+                    </div>
+                </div>
+                
+            </div>   
+             <!-- recuadro exterior de las tarjetas   -->
+            <div class="recuadro-tarjetas">
+                <!-- tarjetas con sus dos lados  -->
+                <div class="card-int">
+                    <div class="card-front">
+                        <img src="/image/dino7.png" alt="">
+                    </div>
+                    <div class="card-back">
+                       <img src="/image/auto-dino.png" alt="">
+
+                    </div>
+                </div>
+                
+            </div>   
+            
+
+
+          </div> 
+          
+         
+<button class="boton" id="voltearBtn">Voltear</button>
+
+    </div>
+    
+ <!-- funcion con javascript para voltear las cartas completas con el boton: voltear  -->
+        <script>
+            const btn = document.getElementById('voltearBtn');
+            const cards = document.querySelectorAll('.card-int');
+           
+
+            btn.addEventListener('click', () => {
+            cards.forEach(card => card.classList.add('flipped'));
+            setTimeout(() => {
+                // Vuelve a la posición original solo 4 de ellas
+                cards.forEach((card, idx) => {
+                if (idx < 4) card.classList.remove('flipped');
+                });
+            }, 2000); // 2 segundos
+            });                   
+        </script>
+    
+</body>
+</html>
