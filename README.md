@@ -27,4 +27,4 @@ Aprender y demostrar cómo aplicar:
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/tarjetas-animadas
+https://github.com/romanwebcode/tarjetas-animadas.git
